@@ -1,8 +1,16 @@
 import React from "react";
 import { render } from "react-dom";
 
+import Home from "./pages/Home";
+import GlobalStyle from "./styles/global";
+
 const App = function() {
-  return <h1>Kabum front-end</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <Home />
+    </>
+  );
 };
 
 render(<App />, document.getElementById("root"));
