@@ -1,0 +1,17 @@
+{
+  "stock": [
+    {
+      "id": 1,
+      "amount": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "product one",
+      "descrition": "prod description",
+      "image": "image url",
+      "price": 5.5
+    }
+  ]
+}
