@@ -3,5 +3,5 @@ import React from "react";
 // import { Container } from './styles';
 
 export default function Product() {
-  return <div />;
+  return <div>Product</div>;
 }
