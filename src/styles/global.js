@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import bgImage from "../assets/bg.jpg";
+import bgImage from "../assets/images/bg.jpg";
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
@@ -17,16 +17,8 @@ export default createGlobalStyle`
     font-size: 14px;
     font-family: "Open Sans Condensed", sans-serif;
   }
-  #root {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url(${bgImage});
     background-repeat: no-repeat;
   }
