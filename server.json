@@ -2,16 +2,29 @@
   "stock": [
     {
       "id": 1,
-      "amount": 10
+      "product_id": 1,
+      "qty": 10
+    },
+    {
+      "id": 2,
+      "product_id": 2,
+      "qty": 6
     }
   ],
   "products": [
     {
       "id": 1,
-      "title": "product one",
+      "title": "Console PS4 1T",
       "descrition": "prod description",
-      "image": "image url",
-      "price": 5.5
+      "image": "https://images3.kabum.com.br/produtos/fotos/107283/console-sony-playstation-4-hits-bundle-mega-pack-7-1tb-call-of-duty-modern-warfare-uncharted-the-nathan-drake-collection-god-of-war-cuh-2214_1572525147_p.jpg",
+      "price": 1799.99
+    },
+    {
+      "id": 2,
+      "title": "Cadeira Gamer Alpha Gamer Vega, Black Red",
+      "descrition": "Cadeira Gamer Alpha Gamer Vega, Black Red Description",
+      "image": "https://images6.kabum.com.br/produtos/fotos/81456/81456_1476706549_p.jpg",
+      "price": 199
     }
   ]
 }
