@@ -41,7 +41,7 @@ export default function CartList({ products }) {
           <div>
             <ProductImage src={prod.image} alt="Imagem do produo" />
             <InfoWrapper>
-              <Title>{prod.title}</Title>
+              <Title to={`products/${prod.id}`}>{prod.title}</Title>
               <DiscountInfo>
                 <p>
                   Com desconto no boleto: R${" "}

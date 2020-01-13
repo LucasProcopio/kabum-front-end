@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   display: flex;
@@ -36,7 +37,7 @@ export const InfoWrapper = styled.div`
   padding-left: 25px;
   width: 315px;
 `;
-export const Title = styled.h4`
+export const Title = styled(Link)`
   color: #555;
   font-size: 22px;
   word-spacing: 1.2px;

@@ -46,7 +46,7 @@ export default function ProductList({ products }) {
                   onClick={() => addToCart(prod.id)}
                   buy={true}
                 />
-                <DetailsButton to={`product/${prod.id}`} />
+                <DetailsButton to={`products/${prod.id}`} />
               </Actions>
             </div>
           </ListItem>
