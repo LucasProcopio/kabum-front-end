@@ -3,7 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchProductByIdRequest } from "../../redux/modules/product/actions";
 
-import { Container } from "./styles";
+import {
+  Container,
+  Title,
+  ProductImage,
+  ProductDetail,
+  Description,
+  Actions,
+  BuyBtn,
+  FullPrice,
+} from "./styles";
 
 export default function Product(props) {
   const { id } = props.match.params;
@@ -12,15 +21,19 @@ export default function Product(props) {
 
   useEffect(() => {
     dispatch(fetchProductByIdRequest(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   return (
-    <div>Prod</div>
-    // <Container>
-    //   <ProductDetail>
-    //     <ProductImageDetail>
-
-    //   </ProductDetail>
-    // </Container>
+    <Container>
+      <ProductDetail>
+        <Title>{product.title}</Title>
+        <ProductImage src={product.showCaseImg} alt="Imagem do produto" />
+        <Description>{product.descrition}</Description>
+      </ProductDetail>
+      <Actions>
+        <BuyBtn type="button" />
+        <FullPrice>{product.price}</FullPrice>
+      </Actions>
+    </Container>
   );
 }
