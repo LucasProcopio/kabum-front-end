@@ -28,7 +28,7 @@ export default function ProductList({ products }) {
   return (
     <Container>
       <List>
-        {map(products.data, prod => (
+        {map(products, prod => (
           <ListItem key={prod.id}>
             <div>
               <ProductImage src={prod.image} alt="Imagem do produo" />

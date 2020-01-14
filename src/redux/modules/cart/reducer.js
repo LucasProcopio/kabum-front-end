@@ -1,5 +1,6 @@
 import produce from "immer";
 import { forEach } from "lodash";
+import lib from "../../../lib";
 
 const initialState = {
   products: [],
@@ -21,6 +22,7 @@ export default function cart(state = initialState, action) {
 
     if (inCart === false) {
       newProduct.inCart = 1;
+      newProduct.withDiscount = lib.discountFifteenPercent(newProduct.price);
       prodDraft.push(newProduct);
     }
 

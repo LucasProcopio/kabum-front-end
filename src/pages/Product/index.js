@@ -12,6 +12,7 @@ import {
   Actions,
   BuyBtn,
   FullPrice,
+  WithDiscount,
 } from "./styles";
 
 export default function Product(props) {
@@ -32,7 +33,15 @@ export default function Product(props) {
       </ProductDetail>
       <Actions>
         <BuyBtn type="button" />
-        <FullPrice>{product.price}</FullPrice>
+        <FullPrice>
+          R$ {product.price}
+          <span> preço total ou com parcelamento no cartão em até 12x</span>
+        </FullPrice>
+        <WithDiscount>
+          R$ {product.withDiscount}{" "}
+          <span className="discount-info"> à vista no boleto bancário com</span>{" "}
+          <span>15% de desconto</span>
+        </WithDiscount>
       </Actions>
     </Container>
   );

@@ -28,6 +28,7 @@ export const ProductDetail = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
   background: #f5f5f5;
   margin: 0;
   padding: 10px;
@@ -36,8 +37,39 @@ export const Description = styled.div`
   font-size: 18px;
   color: #555;
 `;
-export const FullPrice = styled.p``;
-export const Actions = styled.div``;
+export const Actions = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+`;
+export const FullPrice = styled.p`
+  text-align: center;
+  font-size: 26px;
+  color: #fb680f;
+  font-weight: bold;
+  > span {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
+`;
+export const WithDiscount = styled.p`
+  text-align: center;
+  font-size: 26px;
+  color: #029905;
+  font-weight: bold;
+  .discount-info {
+    display: block;
+    font-size: 20px;
+    color: #029905;
+  }
+  > span {
+    font-size: 20px;
+    color: #555;
+  }
+`;
 export const BuyBtn = styled.div`
   background-image: url(${buyImg});
   width: 220px;

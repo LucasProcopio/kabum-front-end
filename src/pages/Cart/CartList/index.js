@@ -22,17 +22,12 @@ import {
 export default function CartList({ products }) {
   const dispatch = useDispatch();
 
-  function discountFifteenPercent(price) {
-    const discount = (15 / 100) * price;
-    const withDiscount = price - discount;
-    return round(withDiscount, 2);
-  }
-
+  function addItem(id) {}
   function removeItem(id) {}
+
   function removeCartItem(id) {
     dispatch(removeCartProduct(id));
   }
-  function addItem(id) {}
 
   return (
     <List>
@@ -43,10 +38,7 @@ export default function CartList({ products }) {
             <InfoWrapper>
               <Title to={`products/${prod.id}`}>{prod.title}</Title>
               <DiscountInfo>
-                <p>
-                  Com desconto no boleto: R${" "}
-                  {discountFifteenPercent(prod.price)}
-                </p>
+                <p>Com desconto no boleto: R$ {prod.withDiscount}</p>
                 <p>Parcelado no cartão: R$ {prod.price}</p>
               </DiscountInfo>
             </InfoWrapper>
