@@ -108,3 +108,11 @@ export const TotalPrice = styled.p`
   border-radius: 8px;
   margin-top: 10px;
 `;
+
+export const Empty = styled.h4`
+  font-size: 26px;
+  color: #fb680f;
+  margin-top: 10px;
+  text-align: center;
+  margin: 0 auto;
+`;

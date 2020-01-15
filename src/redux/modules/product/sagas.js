@@ -1,4 +1,6 @@
 import { call, put, all, takeLatest, delay } from "redux-saga/effects";
+import { toast } from "react-toastify";
+
 import Api from "../../../services/api";
 
 import {
@@ -11,10 +13,10 @@ import {
 function* fetchProducts() {
   try {
     const products = yield call(Api.get, "/products");
-    yield delay(1500);
+    yield delay(800);
     yield put(fetchProductSuccess(products));
   } catch (e) {
-    console.log("failed> " + e);
+    toast.error("⛔ Falha ao obter dados dos produtos.");
     yield put(fetchProductFailure());
   }
 }
@@ -26,7 +28,7 @@ function* fetchProductById({ payload }) {
     yield delay(800);
     yield put(fetchProductByIdSuccess(product.data));
   } catch (e) {
-    console.log("failed> " + e);
+    toast.error("⛔ Falha ao obter dados do produto.");
     yield put(fetchProductByIdFailure());
   }
 }

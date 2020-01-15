@@ -6,6 +6,7 @@ const initialState = {
   list: [],
   loader: false,
   detail: {},
+  filtered: [],
 };
 
 export default function product(state = initialState, action) {
@@ -18,6 +19,10 @@ export default function product(state = initialState, action) {
     });
 
     return productList;
+  }
+
+  function filterProduct(draft, nameFilter) {
+    return lib.applyNameFilter(draft.list, nameFilter);
   }
 
   return produce(state, draft => {
@@ -44,6 +49,11 @@ export default function product(state = initialState, action) {
         draft.detail = newProduct;
         break;
       }
+      case "@product/FETCH_PRODUCT_BY_NAME": {
+        draft.filtered = filterProduct(draft, action.payload.name);
+        break;
+      }
+
       default:
         return state;
     }
