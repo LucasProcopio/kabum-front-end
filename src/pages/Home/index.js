@@ -13,9 +13,10 @@ import {
 } from "../../redux/modules/product/actions";
 
 export default function Home() {
-  const [name, setName] = useState("");
   const loader = useSelector(state => state.product.loader);
   const products = useSelector(state => state.product.list);
+  const [name, setName] = useState("");
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,7 +24,6 @@ export default function Home() {
   }, [dispatch]);
 
   useEffect(() => {
-    console.log(name);
     dispatch(fetchProductByName(name));
   }, [name, dispatch]);
 

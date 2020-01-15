@@ -6,6 +6,7 @@ const initialState = {
   list: [],
   loader: false,
   detail: {},
+  filtered: [],
 };
 
 export default function product(state = initialState, action) {
@@ -18,6 +19,10 @@ export default function product(state = initialState, action) {
     });
 
     return productList;
+  }
+
+  function filterProduct(draft, nameFilter) {
+    return lib.applyNameFilter(draft.list, nameFilter);
   }
 
   return produce(state, draft => {
@@ -45,10 +50,7 @@ export default function product(state = initialState, action) {
         break;
       }
       case "@product/FETCH_PRODUCT_BY_NAME": {
-        //draft.loader = true;
-        // pass draft reference to the function to change its value from the loader
-        // create a filter function that handles the products to be shown
-        // maybe the products must be filtered on the state instead of redux because I will not share them filtered
+        draft.filtered = filterProduct(draft, action.payload.name);
         break;
       }
 

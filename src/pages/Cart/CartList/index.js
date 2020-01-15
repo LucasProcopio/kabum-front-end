@@ -7,6 +7,7 @@ import {
   addCartProductItem,
   removeProductFromCart,
 } from "../../../redux/modules/cart/actions";
+
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import {
   List,
@@ -21,6 +22,7 @@ import {
   Quantity,
   TotalWrapper,
   TotalPrice,
+  Empty,
 } from "./styles";
 
 export default function CartList() {
@@ -41,6 +43,15 @@ export default function CartList() {
 
   return (
     <List>
+      {products.length == 0 && (
+        <Empty>
+          {" "}
+          Seu carrinho está vazio{" "}
+          <span role="img" aria-label="Rosto triste">
+            😢
+          </span>
+        </Empty>
+      )}
       {map(products, prod => (
         <ListItem key={prod.id}>
           <div>

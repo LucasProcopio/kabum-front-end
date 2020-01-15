@@ -1,7 +1,7 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
 import { map } from "lodash";
+
 import {
   Container,
   List,
@@ -20,6 +20,8 @@ import { addProductRequest } from "../../../redux/modules/cart/actions";
 
 export default function ProductList({ products }) {
   const dispatch = useDispatch();
+  const filteredProducts = useSelector(state => state.product.filtered);
+  const list = filteredProducts.length > 0 ? filteredProducts : products;
 
   function addToCart(id) {
     dispatch(addProductRequest(id));
@@ -28,7 +30,7 @@ export default function ProductList({ products }) {
   return (
     <Container>
       <List>
-        {map(products, prod => (
+        {map(list, prod => (
           <ListItem key={prod.id}>
             <div>
               <ProductImage src={prod.image} alt="Imagem do produo" />
