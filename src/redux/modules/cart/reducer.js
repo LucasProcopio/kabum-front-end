@@ -30,19 +30,27 @@ export default function cart(state = initialState, action) {
   }
 
   function removeProduct(id, prodDraft) {
-    let inCart = true;
-    forEach(prodDraft, (prod, key) => {
-      if (id === prod.id) {
-        prod.inCart--;
-      }
+    let productKey;
 
-      if (prod.inCart === 0) {
-        prodDraft.pop(prod[key]);
-        inCart = false;
+    forEach(prodDraft, (prod, key) => {
+      if (prod.id === id) {
+        productKey = key;
       }
     });
 
-    return inCart;
+    prodDraft.pop(productKey);
+  }
+
+  function handleCartProduct(product, prodDraft, addProduct) {
+    if (product.inCart === 1 && addProduct === false) {
+      return;
+    }
+
+    forEach(prodDraft, prod => {
+      if (product.id === prod.id) {
+        addProduct ? prod.inCart++ : prod.inCart--;
+      }
+    });
   }
 
   return produce(state, draft => {
@@ -61,9 +69,17 @@ export default function cart(state = initialState, action) {
         if (!inCart) draft.inCart++;
         break;
       }
+      case "@cart/ADD_CART_PROD_ITEM": {
+        handleCartProduct(action.payload.product, draft.products, true);
+        break;
+      }
+      case "@cart/REMOVE_CART_PROD_ITEM": {
+        handleCartProduct(action.payload.product, draft.products, false);
+        break;
+      }
       case "@cart/REMOVE_CART_PROD": {
-        const inCart = removeProduct(action.payload.id, draft.products);
-        if (!inCart) draft.inCart--;
+        removeProduct(action.payload.id, draft.products);
+        draft.inCart--;
         break;
       }
       default:

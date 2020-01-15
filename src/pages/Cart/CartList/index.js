@@ -1,8 +1,12 @@
 import React from "react";
-import { map, round } from "lodash";
-import { useDispatch } from "react-redux";
+import { map } from "lodash";
+import { useDispatch, useSelector } from "react-redux";
 
-import { removeCartProduct } from "../../../redux/modules/cart/actions";
+import {
+  removeCartProductItem,
+  addCartProductItem,
+  removeProductFromCart,
+} from "../../../redux/modules/cart/actions";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import {
   List,
@@ -19,14 +23,20 @@ import {
   TotalPrice,
 } from "./styles";
 
-export default function CartList({ products }) {
+export default function CartList() {
   const dispatch = useDispatch();
+  const products = useSelector(state => state.cart.products);
 
-  function addItem(id) {}
-  function removeItem(id) {}
+  function addItem(product) {
+    dispatch(addCartProductItem(product));
+  }
+
+  function removeItem(product) {
+    dispatch(removeCartProductItem(product));
+  }
 
   function removeCartItem(id) {
-    dispatch(removeCartProduct(id));
+    dispatch(removeProductFromCart(id));
   }
 
   return (
@@ -48,11 +58,11 @@ export default function CartList({ products }) {
             <QtWrapper>
               <p>Quantidade</p>
               <div>
-                <IncreaseBtn type="button" onClick={() => addItem(prod.id)}>
+                <IncreaseBtn type="button" onClick={() => addItem(prod)}>
                   <FaAngleUp size={20} fill="#fff" />
                 </IncreaseBtn>
                 <Quantity>{prod.inCart}</Quantity>
-                <DecreaseBtn type="button" onClick={() => removeItem(prod.id)}>
+                <DecreaseBtn type="button" onClick={() => removeItem(prod)}>
                   <FaAngleDown size={20} fill="#fff" />
                 </DecreaseBtn>
               </div>

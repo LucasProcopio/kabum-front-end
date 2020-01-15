@@ -21,6 +21,7 @@ export default createGlobalStyle`
     display: flex;
     background-image: url(${bgImage});
     background-repeat: no-repeat;
+    background-size: cover;
   }
   ul {
     list-style: none;

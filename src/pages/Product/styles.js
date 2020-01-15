@@ -4,6 +4,7 @@ import buyImg from "../../assets/images/comprar_detalhes.png";
 export const Container = styled.div`
   width: 80%;
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   background: #fff;
   border-radius: 8px;
@@ -70,7 +71,7 @@ export const WithDiscount = styled.p`
     color: #555;
   }
 `;
-export const BuyBtn = styled.div`
+export const BuyBtn = styled.button`
   background-image: url(${buyImg});
   width: 220px;
   height: 50px;
