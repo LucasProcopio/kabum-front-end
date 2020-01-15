@@ -11,7 +11,7 @@ import {
 function* fetchProducts() {
   try {
     const products = yield call(Api.get, "/products");
-    yield delay(1500);
+    yield delay(800);
     yield put(fetchProductSuccess(products));
   } catch (e) {
     console.log("failed> " + e);

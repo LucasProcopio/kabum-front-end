@@ -36,3 +36,10 @@ export function fetchProductByIdSuccess(product) {
     payload: { product },
   };
 }
+
+export function fetchProductByName(name) {
+  return {
+    type: "@product/FETCH_PRODUCT_BY_NAME",
+    payload: { name },
+  };
+}

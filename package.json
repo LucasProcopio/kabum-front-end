@@ -19,6 +19,7 @@
     "immer": "^5.2.1",
     "lodash": "^4.17.15",
     "react": "^16.12.0",
+    "react-debounce-input": "^3.2.2",
     "react-dom": "^16.12.0",
     "react-icons": "^3.8.0",
     "react-redux": "^7.1.3",
