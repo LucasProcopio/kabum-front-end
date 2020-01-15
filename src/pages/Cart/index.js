@@ -1,7 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-// import { Container } from './styles';
+import Loader from "../../components/Loader";
+import CartList from "./CartList";
+
+import { Container } from "./styles";
 
 export default function Cart() {
-  return <div>Cart</div>;
+  const loader = useSelector(state => state.cart.loader);
+
+  return <Container>{loader ? <Loader size={34} /> : <CartList />}</Container>;
 }

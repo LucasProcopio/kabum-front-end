@@ -16,3 +16,23 @@ export function fetchProductSuccess(products) {
     payload: { products },
   };
 }
+
+export function fetchProductByIdRequest(id) {
+  return {
+    type: "@product/FETCH_PRODUCT_BY_ID_REQUEST",
+    payload: { id },
+  };
+}
+
+export function fetchProductByIdFailure() {
+  return {
+    type: "@product/FETCH_PRODUCT_BY_ID_FAIURE",
+  };
+}
+
+export function fetchProductByIdSuccess(product) {
+  return {
+    type: "@product/FETCH_PRODUCT_BY_ID_SUCCESS",
+    payload: { product },
+  };
+}

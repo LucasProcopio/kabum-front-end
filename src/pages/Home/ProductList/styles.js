@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import buyOn from "../../../assets/images/comprar.png";
 import buyOff from "../../../assets/images/comprar_off.png";
 import details from "../../../assets/images/detalhes-listagem.png";
@@ -73,9 +74,13 @@ export const BuyButton = styled.button`
   border: 0;
   margin-bottom: 10px;
 `;
-export const DetailsButton = styled(BuyButton)`
+export const DetailsButton = styled(Link)`
+  width: 120px;
+  height: 32px;
   background-image: url(${details});
-  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
 `;
 
 export const ProductImage = styled.img``;

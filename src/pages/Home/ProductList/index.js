@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import { map } from "lodash";
 import {
@@ -15,11 +16,19 @@ import {
 } from "./styles";
 import availableImg from "../../../assets/images/icone_disponivel.gif";
 
+import { addProductRequest } from "../../../redux/modules/cart/actions";
+
 export default function ProductList({ products }) {
+  const dispatch = useDispatch();
+
+  function addToCart(id) {
+    dispatch(addProductRequest(id));
+  }
+
   return (
     <Container>
       <List>
-        {map(products.data, prod => (
+        {map(products, prod => (
           <ListItem key={prod.id}>
             <div>
               <ProductImage src={prod.image} alt="Imagem do produo" />
@@ -32,8 +41,12 @@ export default function ProductList({ products }) {
             <div>
               <Price>R$ {prod.price}</Price>
               <Actions>
-                <BuyButton type="button" disabled buy={true} />
-                <DetailsButton type="button" />
+                <BuyButton
+                  type="button"
+                  onClick={() => addToCart(prod.id)}
+                  buy={true}
+                />
+                <DetailsButton to={`products/${prod.id}`} />
               </Actions>
             </div>
           </ListItem>
