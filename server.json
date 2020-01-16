@@ -9,6 +9,26 @@
       "id": 2,
       "product_id": 2,
       "qty": 6
+    },
+    {
+      "id": 3,
+      "product_id": 3,
+      "qty": 5
+    },
+    {
+      "id": 4,
+      "product_id": 4,
+      "qty": 6
+    },
+    {
+      "id": 5,
+      "product_id": 5,
+      "qty": 8
+    },
+    {
+      "id": 6,
+      "product_id": 6,
+      "qty": 12
     }
   ],
   "products": [
@@ -17,7 +37,7 @@
       "title": "Console PS4 1T",
       "descrition": "prod description",
       "image": "https://images3.kabum.com.br/produtos/fotos/107283/console-sony-playstation-4-hits-bundle-mega-pack-7-1tb-call-of-duty-modern-warfare-uncharted-the-nathan-drake-collection-god-of-war-cuh-2214_1572525147_p.jpg",
-      "showCaseImg": "https://images4.kabum.com.br/produtos/fotos/104284/cadeira-gamer-dt3sports-rhino-white-11234-1_cadeira-gamer-dt3sports-rhino-white-11234-1_1568899889_gg.jpg",
+      "showCaseImg": "https://images3.kabum.com.br/produtos/fotos/104673/console-sony-playstation-hits-bundle-fifa-20-1tb-cuh-2214b_1570030933_gg.jpg",
       "price": 1799.99
     },
     {
@@ -26,7 +46,39 @@
       "descrition": "Cadeira Gamer Alpha Gamer Vega, Black Red Description",
       "image": "https://images6.kabum.com.br/produtos/fotos/81456/81456_1476706549_p.jpg",
       "showCaseImg": "https://images4.kabum.com.br/produtos/fotos/104284/cadeira-gamer-dt3sports-rhino-white-11234-1_cadeira-gamer-dt3sports-rhino-white-11234-1_1568899889_gg.jpg",
-      "price": 199
+      "price": 199.99
+    },
+    {
+      "id": 3,
+      "title": "Computador Gamer G-Fire AMD A6-7400K, 8GB, HD 500GB",
+      "descrition": "CComputador Gamer G-Fire AMD A6-7400K, 8GB, HD 500GB, Radeon R5 integrada, DVD-RW, Linux - HTG R07",
+      "image": "https://images6.kabum.com.br/produtos/fotos/82166/82166_index_p.jpg",
+      "showCaseImg": "https://images6.kabum.com.br/produtos/fotos/82166/82166_index_gg.jpg",
+      "price": 1450.0
+    },
+    {
+      "id": 4,
+      "title": "Monitor Portátil Asus LED 15.6´ Widescreen, Full HD",
+      "descrition": "Possui uma solução de sinal híbrido que suporta transmissão de energia e vídeo e permite a compatibilidade com qualquer laptop com um USB Tipo-C ou Tipo A. ",
+      "image": "https://images0.kabum.com.br/produtos/fotos/100350/100350_1550254930_index_p.jpg",
+      "showCaseImg": "https://images0.kabum.com.br/produtos/fotos/100350/100350_1550254930_index_gg.jpg",
+      "price": 1850.89
+    },
+    {
+      "id": 5,
+      "title": "Kit Gamer Gamdias Zeus E1A - Mouse Zeus E1",
+      "descrition": "Kit Gamer Gamdias Zeus E1A - Mouse Zeus E1 + Mousepad NYX E1, Speed, Médio (240x180mm) - ZEUS E1A+NYX E1",
+      "image": "https://images7.kabum.com.br/produtos/fotos/108977/kit-gamer-gamdias-zeus-e1a-mouse-zeus-e1-mousepad-nyx-e1-speed-medio-240x180mm-zeus-e1a-nyx-e1_1578655446_p.jpg",
+      "showCaseImg": "https://images7.kabum.com.br/produtos/fotos/108977/kit-gamer-gamdias-zeus-e1a-mouse-zeus-e1-mousepad-nyx-e1-speed-medio-240x180mm-zeus-e1a-nyx-e1_1578655446_gg.jpg",
+      "price": 124.99
+    },
+    {
+      "id": 6,
+      "title": "HD Seagate BarraCuda, 1TB, 3.5´, SATA - ST1000DM010",
+      "descrition": "A Seagate traz mais de 20 anos de desempenho robusto e confiabilidade aos HDDs Seagate BarraCuda de 3,5 polegadas, agora disponíveis com até 8 TB de capacidade.",
+      "image": "https://images8.kabum.com.br/produtos/fotos/84108/84108_index_p.jpg",
+      "showCaseImg": "https://images8.kabum.com.br/produtos/fotos/84108/84108_index_gg.jpg",
+      "price": 229.9
     }
   ]
 }
